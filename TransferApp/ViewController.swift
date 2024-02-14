@@ -18,11 +18,11 @@ class ViewController: UIViewController {
 
     @IBAction func editDataWithProperty(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! UpdatingDataController
         
         editScreen.updatingData = dataLabel.text ?? ""
         
-        navigationController?.pushViewController(editScreen, animated: true)
+        navigationController?.pushViewController(editScreen as! UIViewController, animated: true)
         
     }
 
