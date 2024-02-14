@@ -7,13 +7,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol UpdatableDataController: AnyObject {
+    var updatedData: String { get set }
+}
+
+class ViewController: UIViewController, UpdatableDataController {
 
     @IBOutlet var dataLabel: UILabel!
+    var updatedData: String = "Label"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateLabel(withText: updatedData)
+    }
+    
+    private func updateLabel(withText text: String) {
+        dataLabel.text = text
     }
 
     @IBAction func editDataWithProperty(_ sender: UIButton) {

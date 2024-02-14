@@ -25,7 +25,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiY-D3-gYC">
                                 <rect key="frame" x="30" y="496" width="354" height="38"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Change through the property">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -68,11 +68,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNA-kz-h3H">
+                                <rect key="frame" x="30" y="495" width="354" height="38"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save data with property">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithProperty:" destination="Dzi-cA-aCj" eventType="touchUpInside" id="Wgg-Uh-2co"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XWo-Vi-PNd"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="qz6-Yc-ot3" firstAttribute="leading" secondItem="XWo-Vi-PNd" secondAttribute="leading" constant="30" id="20H-dz-kFI"/>
+                            <constraint firstItem="DNA-kz-h3H" firstAttribute="leading" secondItem="XWo-Vi-PNd" secondAttribute="leading" constant="30" id="3zG-BH-6JQ"/>
+                            <constraint firstItem="DNA-kz-h3H" firstAttribute="top" secondItem="qz6-Yc-ot3" secondAttribute="bottom" constant="30" id="5hf-7b-3CX"/>
+                            <constraint firstItem="XWo-Vi-PNd" firstAttribute="trailing" secondItem="DNA-kz-h3H" secondAttribute="trailing" constant="30" id="ANp-fJ-O6H"/>
                             <constraint firstItem="qz6-Yc-ot3" firstAttribute="centerY" secondItem="KE7-5J-r5r" secondAttribute="centerY" id="G3O-Ew-931"/>
                             <constraint firstItem="qz6-Yc-ot3" firstAttribute="centerX" secondItem="KE7-5J-r5r" secondAttribute="centerX" id="Nvj-Be-FJe"/>
                             <constraint firstItem="XWo-Vi-PNd" firstAttribute="trailing" secondItem="qz6-Yc-ot3" secondAttribute="trailing" constant="30" id="SJe-Bi-YAO"/>
@@ -107,8 +122,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
