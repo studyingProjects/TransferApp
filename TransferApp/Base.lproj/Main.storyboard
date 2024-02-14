@@ -23,11 +23,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiY-D3-gYC">
+                                <rect key="frame" x="30" y="496" width="354" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change through the property">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQl-wN-sgj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
+                            <constraint firstItem="DiY-D3-gYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CjL-U6-otx"/>
+                            <constraint firstItem="DiY-D3-gYC" firstAttribute="top" secondItem="v7F-VG-jHy" secondAttribute="bottom" constant="30" id="Ffc-ri-bLX"/>
                             <constraint firstItem="v7F-VG-jHy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIV-af-Nsz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DiY-D3-gYC" secondAttribute="trailing" constant="30" id="Nsw-gb-CmV"/>
                             <constraint firstItem="v7F-VG-jHy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oEa-pY-KhG"/>
                         </constraints>
                     </view>
@@ -92,6 +107,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
