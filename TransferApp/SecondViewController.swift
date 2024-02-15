@@ -16,6 +16,7 @@ class SecondViewController: UIViewController, UpdatingDataController {
     @IBOutlet var dataTextField: UITextField!
     var updatingData: String = ""
     var handleUpdatedDataDelegate: DataUpdateProtocol?
+    var completionHandler: ((String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,11 @@ class SecondViewController: UIViewController, UpdatingDataController {
     
     @IBAction func saveDataWithDelegate(_ sender: UIButton) {
         handleUpdatedDataDelegate?.onDataUpdate(data: dataTextField.text ?? "")
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func saveDataWithClosure(_ sender: UIButton) {
+        completionHandler?(dataTextField.text ?? "")
         navigationController?.popViewController(animated: true)
     }
     

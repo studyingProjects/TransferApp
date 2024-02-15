@@ -62,6 +62,18 @@ class ViewController: UIViewController, UpdatableDataController {
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
+    @IBAction func editDataWithClosure(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        secondViewController.updatingData = dataLabel.text ?? ""
+        
+        secondViewController.completionHandler = { [unowned self] updatedValue in
+            updatedData = updatedValue
+            updateLabel(withText: updatedValue)
+        }
+        navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    
     private func updateLabel(withText text: String) {
         dataLabel.text = text
     }

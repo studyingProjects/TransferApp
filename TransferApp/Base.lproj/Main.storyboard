@@ -59,10 +59,23 @@
                                     <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DFO-7Q-TPs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWw-AM-ZC8">
+                                <rect key="frame" x="30" y="700" width="354" height="38"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change through the closure">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editDataWithClosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRw-Fh-ltx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HWw-AM-ZC8" secondAttribute="trailing" constant="30" id="1rn-U9-Nx8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vIa-Gr-ifC" secondAttribute="trailing" constant="30" id="2Y7-wU-6kg"/>
                             <constraint firstItem="vIa-Gr-ifC" firstAttribute="top" secondItem="MPm-NF-Z5p" secondAttribute="bottom" constant="30" id="9Ue-Be-heF"/>
                             <constraint firstItem="DiY-D3-gYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CjL-U6-otx"/>
@@ -72,7 +85,9 @@
                             <constraint firstItem="vIa-Gr-ifC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PYI-tL-LhM"/>
                             <constraint firstItem="MPm-NF-Z5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="iji-td-kHc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MPm-NF-Z5p" secondAttribute="trailing" constant="30" id="j5U-Pp-4mk"/>
+                            <constraint firstItem="HWw-AM-ZC8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kT1-Tg-yOS"/>
                             <constraint firstItem="v7F-VG-jHy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oEa-pY-KhG"/>
+                            <constraint firstItem="HWw-AM-ZC8" firstAttribute="top" secondItem="vIa-Gr-ifC" secondAttribute="bottom" constant="30" id="uuJ-1F-quc"/>
                             <constraint firstItem="MPm-NF-Z5p" firstAttribute="top" secondItem="DiY-D3-gYC" secondAttribute="bottom" constant="30" id="vuV-1Q-x2c"/>
                         </constraints>
                     </view>
@@ -134,6 +149,18 @@
                                     <action selector="saveDataWithDelegate:" destination="Dzi-cA-aCj" eventType="touchUpInside" id="r13-Qd-9ki"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBZ-aX-vQs">
+                                <rect key="frame" x="30" y="699" width="354" height="38"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save data with closure">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveDataWithClosure:" destination="Dzi-cA-aCj" eventType="touchUpInside" id="kUQ-P7-di5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XWo-Vi-PNd"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -149,8 +176,11 @@
                             <constraint firstItem="qz6-Yc-ot3" firstAttribute="centerX" secondItem="KE7-5J-r5r" secondAttribute="centerX" id="Nvj-Be-FJe"/>
                             <constraint firstItem="zNu-Q5-UyM" firstAttribute="leading" secondItem="XWo-Vi-PNd" secondAttribute="leading" constant="30" id="PQq-xx-Pd9"/>
                             <constraint firstItem="XWo-Vi-PNd" firstAttribute="trailing" secondItem="qz6-Yc-ot3" secondAttribute="trailing" constant="30" id="SJe-Bi-YAO"/>
+                            <constraint firstItem="dBZ-aX-vQs" firstAttribute="top" secondItem="LlS-xn-1uB" secondAttribute="bottom" constant="30" id="aG7-Rh-1zc"/>
                             <constraint firstItem="XWo-Vi-PNd" firstAttribute="trailing" secondItem="zNu-Q5-UyM" secondAttribute="trailing" constant="30" id="jXP-MB-Mjh"/>
                             <constraint firstItem="XWo-Vi-PNd" firstAttribute="trailing" secondItem="LlS-xn-1uB" secondAttribute="trailing" constant="30" id="l5A-G2-0VO"/>
+                            <constraint firstItem="XWo-Vi-PNd" firstAttribute="trailing" secondItem="dBZ-aX-vQs" secondAttribute="trailing" constant="30" id="pT8-1j-29V"/>
+                            <constraint firstItem="dBZ-aX-vQs" firstAttribute="leading" secondItem="XWo-Vi-PNd" secondAttribute="leading" constant="30" id="xfl-SU-du4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scene B" largeTitleDisplayMode="always" id="P8U-Sp-0Fs"/>
