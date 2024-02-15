@@ -35,6 +35,18 @@
                                     <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQl-wN-sgj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPm-NF-Z5p">
+                                <rect key="frame" x="30" y="564" width="354" height="38"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change through the segue">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Dzi-cA-aCj" kind="show" identifier="toEditScreen" id="4Qw-gT-hZW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -43,7 +55,10 @@
                             <constraint firstItem="DiY-D3-gYC" firstAttribute="top" secondItem="v7F-VG-jHy" secondAttribute="bottom" constant="30" id="Ffc-ri-bLX"/>
                             <constraint firstItem="v7F-VG-jHy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIV-af-Nsz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DiY-D3-gYC" secondAttribute="trailing" constant="30" id="Nsw-gb-CmV"/>
+                            <constraint firstItem="MPm-NF-Z5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="iji-td-kHc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MPm-NF-Z5p" secondAttribute="trailing" constant="30" id="j5U-Pp-4mk"/>
                             <constraint firstItem="v7F-VG-jHy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oEa-pY-KhG"/>
+                            <constraint firstItem="MPm-NF-Z5p" firstAttribute="top" secondItem="DiY-D3-gYC" secondAttribute="bottom" constant="30" id="vuV-1Q-x2c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scene A" largeTitleDisplayMode="always" id="d4H-6a-ckS"/>
@@ -100,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCd-59-hkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="-28"/>
+            <point key="canvasLocation" x="1587" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sPQ-eB-Eaz">
