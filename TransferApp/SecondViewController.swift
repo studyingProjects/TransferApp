@@ -38,6 +38,22 @@ class SecondViewController: UIViewController, UpdatingDataController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toFirstScreen":
+            prepareFirstScreen(segue)
+        default:
+            break
+        }
+    }
+    
+    private func prepareFirstScreen(_ segue: UIStoryboardSegue) {
+        guard let destinationVC = segue.destination as? ViewController else {
+            return
+        }
+        destinationVC.updatedData = dataTextField.text ?? ""
+    }
 
 
 }
