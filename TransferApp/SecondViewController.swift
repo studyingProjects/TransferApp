@@ -15,6 +15,7 @@ class SecondViewController: UIViewController, UpdatingDataController {
 
     @IBOutlet var dataTextField: UITextField!
     var updatingData: String = ""
+    var handleUpdatedDataDelegate: DataUpdateProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,13 @@ class SecondViewController: UIViewController, UpdatingDataController {
         
     }
     
-    private func updateTextFieldData(withText text: String) {
-        dataTextField.text = text
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toFirstScreen":
+            prepareFirstScreen(segue)
+        default:
+            break
+        }
     }
     
     @IBAction func saveDataWithProperty(_ sender: UIButton) {
@@ -39,13 +45,13 @@ class SecondViewController: UIViewController, UpdatingDataController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "toFirstScreen":
-            prepareFirstScreen(segue)
-        default:
-            break
-        }
+    @IBAction func saveDataWithDelegate(_ sender: UIButton) {
+        handleUpdatedDataDelegate?.onDataUpdate(data: dataTextField.text ?? "")
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateTextFieldData(withText text: String) {
+        dataTextField.text = text
     }
     
     private func prepareFirstScreen(_ segue: UIStoryboardSegue) {
