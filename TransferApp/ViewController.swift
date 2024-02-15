@@ -59,7 +59,7 @@ class ViewController: UIViewController, UpdatableDataController {
         let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         secondViewController.handleUpdatedDataDelegate = self
         secondViewController.updatingData = dataLabel.text ?? ""
-        self.present(secondViewController, animated: true)
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
     private func updateLabel(withText text: String) {
